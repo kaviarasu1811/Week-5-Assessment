@@ -1,0 +1,10 @@
+<div *ngIf="employees.length > 0; else noRecordsTemplate">
+  <h2>Employee List:</h2>
+  <ul>
+    <li *ngFor="let emp of employees">{{ emp.name }} ({{ emp.code }})</li>
+  </ul>
+</div>
+
+<ng-template #noRecordsTemplate>
+  <h1>There are no records</h1>
+</ng-template>

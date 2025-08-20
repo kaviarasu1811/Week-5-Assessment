@@ -1,0 +1,21 @@
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Annual Salary</th>
+      <th>Date of Birth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.code | uppercase }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.gender }}</td>
+      <td>₹{{ emp.annualSalary | number:'1.2-2' }}</td>
+      <td>{{ emp.dateOfBirth | date:'fullDate' }}</td>
+    </tr>
+  </tbody>
+</table>
+
